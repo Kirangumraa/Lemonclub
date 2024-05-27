@@ -1,0 +1,27 @@
+import Sidebar from "./Sidebar";
+import Program_Content from "./Program_Content";
+import Notification from "./top_right_panel";
+import { Container } from 'react-bootstrap';
+import Program_affiliated from './Program_affiliated';
+
+const Home = () => {
+    return (<>
+
+        <Container fluid className="px-0 overflow-hidden" >
+            <Sidebar />
+            <div className="float-end vh-100 position-relative content">
+                <div className="border border-dark rounded-4 position-absolute w-100 inr-area">
+                    <div className="border-bottom border-dark d-flex align-items-center justify-content-between">
+                        <h1 className="nav-title">Dashboard / <span className="text-white">Programs</span></h1>
+                        <Notification />
+                    </div>
+                    <Program_affiliated />
+                </div>
+            </div>
+            <div className="footer-text padding-top0"> LemonClub © 2024 </div>
+        </Container>
+    </>
+
+    );
+}
+export default Home;
